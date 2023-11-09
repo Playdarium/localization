@@ -1,25 +1,27 @@
 {
   "dependencies": {
-    "com.jeffcampbellmakesgames.packagetools": {
-      "version": "https://github.com/jeffcampbellmakesgames/unity-package-tools.git#release/stable",
+    "com.playdarium.package-tool": {
+      "version": "1.0.3",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {},
-      "hash": "72ddf22d3b365b4084ff852b784146a2a2b87c08"
+      "url": "https://package.openupm.com"
     },
     "com.playdarium.serialize-property-serializer": {
-      "version": "https://gitlab.com/pd-packages/serialize-property-serializer.git#upm-1.0.0",
+      "version": "1.2.5",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {},
-      "hash": "a066f7bec7f6aa7b8c74c0140b8083a2de4ebc81"
+      "url": "https://package.openupm.com"
     },
     "com.playdarium.spreadsheet-downloader": {
-      "version": "https://gitlab.com/pd-packages/spreadsheet-downloader.git#upm-1.0.0",
+      "version": "1.0.0",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "fcbcc23d37efd23174808e4c52dfbd597cacfaa1"
+      "source": "registry",
+      "dependencies": {
+        "com.unity.editorcoroutines": "1.0.0"
+      },
+      "url": "https://package.openupm.com"
     },
     "com.playdarium.unirx": {
       "version": "https://gitlab.com/nazgull30/unirxplaydarium.git#upm",
@@ -146,6 +148,13 @@
     "com.unity.collab-proxy": {
       "version": "2.1.0",
       "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.editorcoroutines": {
+      "version": "1.0.0",
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"

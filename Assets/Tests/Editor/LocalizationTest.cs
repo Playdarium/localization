@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
-using Package.Localization.Runtime;
-using Package.Localization.Runtime.Zenject;
+using Playdarium.Localization.Runtime;
+using Playdarium.Localization.Runtime.Zenject;
 using UnityEngine;
 
 namespace Tests.Editor

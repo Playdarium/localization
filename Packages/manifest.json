@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "com.jeffcampbellmakesgames.packagetools": "https://github.com/jeffcampbellmakesgames/unity-package-tools.git#release/stable",
+    "com.playdarium.package-tool": "1.0.3",
+    "com.playdarium.serialize-property-serializer": "1.2.5",
+    "com.playdarium.spreadsheet-downloader": "1.0.0",
     "com.playdarium.unirx": "https://gitlab.com/nazgull30/unirxplaydarium.git#upm",
     "com.playdarium.zenject": "https://gitlab.com/nazgull30/zenjectplaydarium.git#upm",
-    "com.playdarium.spreadsheet-downloader": "https://gitlab.com/pd-packages/spreadsheet-downloader.git#upm-1.0.0",
-    "com.playdarium.serialize-property-serializer": "https://gitlab.com/pd-packages/serialize-property-serializer.git#upm-1.0.0",
     "com.unity.collab-proxy": "2.1.0",
     "com.unity.feature.2d": "2.0.0",
     "com.unity.ide.rider": "3.0.25",
@@ -46,5 +46,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "Playdarium",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.playdarium"
+      ]
+    }
+  ]
 }

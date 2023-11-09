@@ -1,1 +1,32 @@
-{"name":"com.playdarium.localization","displayName":"Localization","version":"1.0.0","unity":"2021.3","description":"","keywords":["localization","languages"],"category":"","author":{	"name":"Playdarium",	"email":"playdarium@gmail.com",	"url":"https://playdarium.com"}}
+{
+  "name": "com.playdarium.localization",
+  "version": "1.0.0",
+  "displayName": "Localization",
+  "description": "Fast and simple localization utility",
+  "category": "Utility",
+  "unity": "2021.3",
+  "homepage": "https://github.com/Playdarium/localization",
+  "documentationUrl": "https://github.com/Playdarium/localization/README.md",
+  "changelogUrl": "https://github.com/Playdarium/localization/CHANGELOG.md",
+  "licensesUrl": "https://github.com/Playdarium/localization/LICENSE",
+  "keywords": [
+    "localization",
+    "languages"
+  ],
+  "dependencies": {
+    "com.playdarium.serialize-property-serializer": "1.2.5",
+    "com.playdarium.spreadsheet-downloader": "1.0.0"
+  },
+  "author": {
+    "name": "Playdarium",
+    "email": "playdarium@gmail.com",
+    "url": "https://playdarium.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Playdarium/localization.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Playdarium/localization/issues"
+  }
+}
