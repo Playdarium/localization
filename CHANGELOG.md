@@ -2,6 +2,14 @@
 
 ---
 
+## [v1.0.1](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
+
+### Fixed
+
+- Change language in `LocalizationService` using methods `NextLanguage` and `PreviousLanguage`
+
+---
+
 ## [v1.0.0](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
 
 ### Added
