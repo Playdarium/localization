@@ -29,7 +29,7 @@ namespace Playdarium.Localization.Runtime.Impls
 
 		public void PreviousLanguage()
 		{
-			var index = Array.IndexOf(AvailableLanguages, CurrentLanguage) - 1;
+			var index = Array.IndexOf(AvailableLanguages, CurrentLanguage.Value) - 1;
 			if (index < 0)
 				index += AvailableLanguages.Length;
 
@@ -38,7 +38,7 @@ namespace Playdarium.Localization.Runtime.Impls
 
 		public void NextLanguage()
 		{
-			var index = Array.IndexOf(AvailableLanguages, CurrentLanguage) + 1;
+			var index = Array.IndexOf(AvailableLanguages, CurrentLanguage.Value) + 1;
 			_currentLanguageProperty.Value = AvailableLanguages[index % AvailableLanguages.Length];
 		}
 

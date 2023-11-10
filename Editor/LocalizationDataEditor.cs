@@ -34,7 +34,7 @@ namespace Playdarium.Localization
 
 			foreach (var group in keys.GroupBy(s => s.Name))
 			{
-				if(group.Count() > 1)
+				if (group.Count() > 1)
 					Debug.LogError($"[{nameof(LocalizationDataEditor)}] Has key duplicate '{group.Key}'");
 			}
 
