@@ -15,7 +15,7 @@ namespace Playdarium.Localization.Runtime.Zenject
 		{
 		}
 
-		public LocalizationAttribute(string key, bool dynamic = false, ECaseType caseType = ECaseType.None)
+		public LocalizationAttribute(string key, bool dynamic, ECaseType caseType = ECaseType.None)
 		{
 			Key = key;
 			Dynamic = dynamic;
