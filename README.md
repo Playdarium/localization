@@ -16,7 +16,7 @@ registry.
 
 #### Add registry scope
 
-```
+```json
 {
   "dependencies": {
     ...
@@ -39,7 +39,7 @@ Open `Window -> Package Manager` choose `Packages: My Regestries` and install pa
 
 ### Install via GIT URL
 
-```
+```json
 "com.playdarium.localization": "https://github.com/Playdarium/localization.git#upm"
 ```
 
@@ -63,7 +63,7 @@ components.
 For localize static text add attribute **LocalizationAttribute** to target field. Target field should be **private**
 and **SerializeField** or **public**.
 
-```c#
+```csharp
 public class SomeView : MonoBehaviour
 {
     [Localization("localization.key")] 
@@ -77,7 +77,7 @@ public class SomeView : MonoBehaviour
 For dynamic localization you need provide text contained args pattern.
 Args pattern you can create using **Localizable.ToArgs(params string[] args)**.
 
-```c#
+```csharp
 public class SomeView : MonoBehaviour
 {
     [Localization("localization.key", true)] 
@@ -95,7 +95,7 @@ Localization key can contain formatting arguments.
 | text.format | "{0}: {1}" |
 | text.score  | "Score"    |
 
-```c#
+```csharp
 public class SomeView : MonoBehaviour
 {
     [Localization("text.format", true)] 

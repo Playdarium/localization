@@ -2,6 +2,14 @@
 
 ---
 
+## [v1.0.2](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
+
+### Added
+
+- Post process localized text
+
+---
+
 ## [v1.0.1](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
 
 ### Fixed
