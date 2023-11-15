@@ -26,6 +26,7 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 		public void Localize(SystemLanguage language)
 		{
 			var text = _localizationProvider.Find(language, _attribute.Key);
+			_attribute.PostProcessText(ref text);
 			_textAccessStrategy.SetText(text, _localizable);
 		}
 

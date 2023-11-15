@@ -50,6 +50,7 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 			var localizationValue = LocalizationValue.Build(text, 0, text.Length);
 			text = localizationValue.Localize(_attribute.Key, text, language,
 				_localizationProvider);
+			_attribute.PostProcessText(ref text);
 			_textAccessStrategy.SetText(text, _localizable);
 		}
 
