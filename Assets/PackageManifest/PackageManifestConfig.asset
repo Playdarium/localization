@@ -23,7 +23,7 @@ MonoBehaviour:
   legacyPackageDestinationPath: 
   packageName: com.playdarium.localization
   displayName: Localization
-  packageVersion: 1.0.4
+  packageVersion: 1.0.5
   unityVersion: 2021.3
   description: Fast and simple localization utility
   category: Utility
@@ -39,6 +39,8 @@ MonoBehaviour:
     packageVersion: 1.2.5
   - packageName: com.playdarium.spreadsheet-downloader
     packageVersion: 1.0.0
+  - packageName: com.unity.textmeshpro
+    packageVersion: 3.0.6
   samples: []
   versionConstantsPath: Assets/Playdarium/Localization
   versionConstantsNamespace: 

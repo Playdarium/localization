@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using Zenject;
 
 namespace Playdarium.Localization.Runtime.Zenject.Impls
@@ -78,7 +79,7 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 		[Serializable]
 		private class StaticLocalizedObject : ILocalizationSettings
 		{
-			[SerializeField] private Component component;
+			[SerializeField] private UIBehaviour component;
 			[SerializeField] private string key;
 
 			public Component Component => component;
