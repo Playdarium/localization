@@ -5,32 +5,32 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 {
 	public class StaticLocalizableObject : ILocalizableObject
 	{
-		private readonly LocalizationAttribute _attribute;
 		private readonly object _localizable;
+		private readonly ILocalizationSettings _settings;
 		private readonly ITextAccessStrategy _textAccessStrategy;
 		private readonly ILocalizationProvider _localizationProvider;
 
 		public StaticLocalizableObject(
-			LocalizationAttribute attribute,
 			object localizable,
+			ILocalizationSettings settings,
 			ITextAccessStrategy textAccessStrategy,
 			ILocalizationProvider localizationProvider
 		)
 		{
-			_attribute = attribute;
 			_localizable = localizable;
+			_settings = settings;
 			_textAccessStrategy = textAccessStrategy;
 			_localizationProvider = localizationProvider;
 		}
 
 		public void Localize(SystemLanguage language)
 		{
-			var text = _localizationProvider.Find(language, _attribute.Key);
-			_attribute.PostProcessText(ref text);
+			var text = _localizationProvider.Find(language, _settings.Key);
+			_settings.PostProcessText(ref text);
 			_textAccessStrategy.SetText(text, _localizable);
 		}
 
-		public class Factory : PlaceholderFactory<LocalizationAttribute, object, ITextAccessStrategy,
+		public class Factory : PlaceholderFactory<object, ILocalizationSettings, ITextAccessStrategy,
 			StaticLocalizableObject>
 		{
 		}

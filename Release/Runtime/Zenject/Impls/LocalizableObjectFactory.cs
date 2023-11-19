@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Playdarium.Localization.Runtime.Zenject.Impls
 {
@@ -20,17 +19,15 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 			_dynamicLocalizableObjectFactory = dynamicLocalizableObjectFactory;
 		}
 
-		public ILocalizableObject Create(LocalizableField localizableField, Component localizable)
+		public ILocalizableObject Create(object localizable, ILocalizationSettings settings)
 		{
-			var fieldValue = localizableField.Value;
-			var accessStrategy = GetAccessStrategy(fieldValue);
+			var accessStrategy = GetAccessStrategy(localizable);
 			if (accessStrategy == null)
 				return null;
 
-			return localizableField.Attribute.Dynamic
-				? _dynamicLocalizableObjectFactory.Create(localizableField.Attribute, fieldValue,
-					accessStrategy)
-				: _staticLocalizableObjectFactory.Create(localizableField.Attribute, fieldValue, accessStrategy);
+			return settings.Dynamic
+				? _dynamicLocalizableObjectFactory.Create(localizable, settings, accessStrategy)
+				: _staticLocalizableObjectFactory.Create(localizable, settings, accessStrategy);
 		}
 
 		private ITextAccessStrategy GetAccessStrategy(object obj)

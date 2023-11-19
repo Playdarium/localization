@@ -2,13 +2,13 @@ namespace Playdarium.Localization.Runtime.Zenject
 {
 	public readonly struct LocalizableField
 	{
-		public readonly LocalizationAttribute Attribute;
 		public readonly object Value;
+		public readonly ILocalizationSettings Settings;
 
-		public LocalizableField(LocalizationAttribute attribute, object value)
+		public LocalizableField(object value, ILocalizationSettings settings)
 		{
-			Attribute = attribute;
 			Value = value;
+			Settings = settings;
 		}
 	}
 }

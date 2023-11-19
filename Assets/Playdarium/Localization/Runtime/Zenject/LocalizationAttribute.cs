@@ -4,10 +4,10 @@ using Playdarium.Localization.Runtime.Models;
 namespace Playdarium.Localization.Runtime.Zenject
 {
 	[AttributeUsage(AttributeTargets.Field)]
-	public class LocalizationAttribute : Attribute
+	public class LocalizationAttribute : Attribute, ILocalizationSettings
 	{
-		public readonly bool Dynamic;
-		public readonly string Key;
+		public string Key { get; }
+		public bool Dynamic { get; }
 
 		private readonly ECaseType _caseType;
 
@@ -21,6 +21,7 @@ namespace Playdarium.Localization.Runtime.Zenject
 			Dynamic = dynamic;
 			_caseType = caseType;
 		}
+
 
 		public virtual void PostProcessText(ref string text)
 		{
