@@ -2,11 +2,19 @@
 
 ---
 
+## [v1.0.4](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
+
+### Fixed
+
+- Static localized object in LocalizationInjection component
+
+---
+
 ## [v1.0.3](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
 
 ### Fixed
 
-- Localization attribute constructor
+- Fix LocalizationAttribute constructor
 
 ---
 

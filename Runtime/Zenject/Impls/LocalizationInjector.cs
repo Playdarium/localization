@@ -17,15 +17,15 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 			_localizableObjectFactory = localizableObjectFactory;
 		}
 
-		public void Localize(Component localizable, List<ILocalizableObject> localizableObjects)
-			=> RegisterLocalizableFields(localizable, localizableObjects);
+		public void Localize(Component localizableView, List<ILocalizableObject> localizableObjects)
+			=> RegisterLocalizableFields(localizableView, localizableObjects);
 
 		private void RegisterLocalizableFields(
-			Component localizable,
+			Component localizableView,
 			List<ILocalizableObject> localizableObjects
 		)
 		{
-			var type = localizable.GetType();
+			var type = localizableView.GetType();
 			do
 			{
 				var fields = type.GetFields(FIELD_BINDING);
@@ -35,8 +35,7 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 					if (attr == null)
 						continue;
 
-					var localizableField = new LocalizableField(attr, fieldInfo.GetValue(localizable));
-					var localizableObject = _localizableObjectFactory.Create(localizableField, localizable);
+					var localizableObject = Localize(fieldInfo.GetValue(localizableView), attr);
 					if (localizableObject == null)
 						continue;
 
@@ -46,5 +45,8 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 				type = type.BaseType;
 			} while (type != null);
 		}
+
+		public ILocalizableObject Localize(object localizable, ILocalizationSettings settings)
+			=> _localizableObjectFactory.Create(localizable, settings);
 	}
 }

@@ -35,8 +35,8 @@ namespace Playdarium.Localization.Runtime.Zenject.Installers
 		}
 
 		private void BindLocalizableObjectFactory<TContract, TFactory>()
-			where TFactory : PlaceholderFactory<LocalizationAttribute, object, ITextAccessStrategy, TContract>
-			=> Container.BindFactory<LocalizationAttribute, object, ITextAccessStrategy,
+			where TFactory : PlaceholderFactory<object, ILocalizationSettings, ITextAccessStrategy, TContract>
+			=> Container.BindFactory<object, ILocalizationSettings, ITextAccessStrategy,
 				TContract, TFactory>().AsSingle();
 	}
 }

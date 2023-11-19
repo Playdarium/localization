@@ -11,6 +11,7 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 		private readonly List<ILocalizableObject> _localizableObjects = new();
 
 		[SerializeField] private Component[] components = Array.Empty<Component>();
+		[SerializeField] private StaticLocalizedObject[] staticObjects;
 
 		private ILocalizationInjector _localizationInjector;
 		private ILocalizationService _localizationService;
@@ -35,6 +36,15 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 
 			foreach (var component in components)
 				_localizationInjector.Localize(component, _localizableObjects);
+
+			foreach (var staticObject in staticObjects)
+			{
+				var localizableObject = _localizationInjector.Localize(staticObject.Component, staticObject);
+				if (localizableObject == null)
+					continue;
+
+				_localizableObjects.Add(localizableObject);
+			}
 
 			if (_languageChangedDisposable == null)
 				OnEnable();
@@ -63,6 +73,21 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 		private void OnDestroy()
 		{
 			_languageChangedDisposable?.Dispose();
+		}
+
+		[Serializable]
+		private class StaticLocalizedObject : ILocalizationSettings
+		{
+			[SerializeField] private Component component;
+			[SerializeField] private string key;
+
+			public Component Component => component;
+			public string Key => key;
+			public bool Dynamic => false;
+
+			public void PostProcessText(ref string text)
+			{
+			}
 		}
 	}
 }
