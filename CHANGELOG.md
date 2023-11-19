@@ -2,6 +2,14 @@
 
 ---
 
+## [v1.0.5](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
+
+### Added
+
+- Test button for static objects translates
+
+---
+
 ## [v1.0.4](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
 
 ### Fixed

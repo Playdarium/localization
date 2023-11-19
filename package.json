@@ -1,6 +1,6 @@
 {
   "name": "com.playdarium.localization",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "displayName": "Localization",
   "description": "Fast and simple localization utility",
   "category": "Utility",
@@ -15,7 +15,8 @@
   ],
   "dependencies": {
     "com.playdarium.serialize-property-serializer": "1.2.5",
-    "com.playdarium.spreadsheet-downloader": "1.0.0"
+    "com.playdarium.spreadsheet-downloader": "1.0.0",
+    "com.unity.textmeshpro": "3.0.6"
   },
   "author": {
     "name": "Playdarium",
