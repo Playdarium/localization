@@ -1,13 +1,13 @@
 using System.Linq;
 using Playdarium.Localization.Runtime.Models;
+using Playdarium.Localization.Runtime.Zenject.Impls;
 using Playdarium.Serializer.Runtime.Fluent;
-using Playdarium.Serializer.Utils;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Playdarium.Localization.Runtime.Zenject.Impls
+namespace Playdarium.Localization
 {
 	[CustomEditor(typeof(LocalizationInjection))]
 	public class LocalizationInjectionEditor : Editor
@@ -30,11 +30,11 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 
 		public override void OnInspectorGUI()
 		{
-			DrawHeader();
+			DrawHeaderElements();
 			base.OnInspectorGUI();
 		}
 
-		private void DrawHeader()
+		private void DrawHeaderElements()
 		{
 			if (_localizationData == null)
 			{

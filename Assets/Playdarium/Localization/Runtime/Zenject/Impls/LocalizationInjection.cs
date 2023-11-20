@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UniRx;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using Zenject;
 
 namespace Playdarium.Localization.Runtime.Zenject.Impls
 {
-	public class LocalizationInjection : MonoBehaviour
+	public partial class LocalizationInjection : MonoBehaviour
 	{
 		private readonly List<ILocalizableObject> _localizableObjects = new();
 
@@ -79,8 +79,8 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 		[Serializable]
 		private class StaticLocalizedObject : ILocalizationSettings
 		{
-			[SerializeField] private UIBehaviour component;
-			[SerializeField] private string key;
+			[SerializeField] private TMP_Text component;
+			[LocalizationKey] [SerializeField] private string key;
 
 			public Component Component => component;
 			public string Key => key;

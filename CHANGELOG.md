@@ -2,6 +2,15 @@
 
 ---
 
+## [v1.0.6](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
+
+### Added
+
+- Check exist a localization key in LocalizationInjection component
+- Editor tools for download, check null static and clear null static
+
+---
+
 ## [v1.0.5](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
 
 ### Added
