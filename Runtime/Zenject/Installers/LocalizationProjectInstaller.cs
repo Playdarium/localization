@@ -24,13 +24,13 @@ namespace Playdarium.Localization.Runtime.Zenject.Installers
 			Container.Bind<ILocalizationProvider>().To<LocalizationProvider>().AsSingle()
 				.WhenInjectedInto(typeof(DynamicLocalizableObject), typeof(StaticLocalizableObject));
 			Container.Bind<ILocalizationService>().To<LocalizationService>().AsSingle();
-			
+
 			Container.BindInterfacesTo<LocalizableObjectFactory>().AsSingle();
 			BindLocalizableObjectFactory<DynamicLocalizableObject, DynamicLocalizableObject.Factory>();
 			BindLocalizableObjectFactory<StaticLocalizableObject, StaticLocalizableObject.Factory>();
 
 			Container.BindInterfacesTo<LocalizationInjector>().AsSingle();
-			Container.BindInterfacesTo<UiTextAccessStrategy>().AsCached();
+
 			Container.BindInterfacesTo<UiTMPTextAccessStrategy>().AsCached();
 		}
 
