@@ -22,7 +22,11 @@ namespace Playdarium.Localization.Runtime.Zenject.Installers
 				.WhenInjectedInto(typeof(LocalizationService), typeof(LocalizationProvider));
 
 			Container.Bind<ILocalizationProvider>().To<LocalizationProvider>().AsSingle()
-				.WhenInjectedInto(typeof(DynamicLocalizableObject), typeof(StaticLocalizableObject));
+				.WhenInjectedInto(
+					typeof(LocalizationService),
+					typeof(DynamicLocalizableObject),
+					typeof(StaticLocalizableObject)
+				);
 			Container.Bind<ILocalizationService>().To<LocalizationService>().AsSingle();
 
 			Container.BindInterfacesTo<LocalizableObjectFactory>().AsSingle();
