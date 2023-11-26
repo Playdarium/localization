@@ -36,7 +36,12 @@ namespace Playdarium.Localization.Runtime.Zenject.Impls
 			_isInitialized = true;
 
 			foreach (var component in components)
-				_localizationInjector.Localize(component, _localizableObjects);
+			{
+				if (component is LocalizationInjection injection)
+					injection.Construct(_localizationInjector, _localizationService);
+				else
+					_localizationInjector.Localize(component, _localizableObjects);
+			}
 
 			foreach (var staticObject in staticObjects)
 			{
