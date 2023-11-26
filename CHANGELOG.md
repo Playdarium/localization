@@ -2,6 +2,14 @@
 
 ---
 
+## [v1.0.7](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
+
+### Added
+
+- Method for manual localization using `ILocalizationService`
+
+---
+
 ## [v1.0.6](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
 
 ### Added

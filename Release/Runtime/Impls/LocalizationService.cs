@@ -8,6 +8,7 @@ namespace Playdarium.Localization.Runtime.Impls
 	public class LocalizationService : ILocalizationService
 	{
 		private readonly LanguageGroups _groups;
+		private readonly ILocalizationProvider _localizationProvider;
 
 		public SystemLanguage[] AvailableLanguages { get; }
 
@@ -16,10 +17,12 @@ namespace Playdarium.Localization.Runtime.Impls
 
 		public LocalizationService(
 			LocalizationData data,
-			LanguageGroups groups
+			LanguageGroups groups,
+			ILocalizationProvider localizationProvider
 		)
 		{
 			_groups = groups;
+			_localizationProvider = localizationProvider;
 			AvailableLanguages = data.Languages;
 			_currentLanguageProperty = new ReactiveProperty<SystemLanguage>(GetDefaultLanguage());
 		}
@@ -55,5 +58,7 @@ namespace Playdarium.Localization.Runtime.Impls
 
 			_currentLanguageProperty.Value = AvailableLanguages[index];
 		}
+
+		public string Find(string key) => _localizationProvider.Find(_currentLanguageProperty.Value, key);
 	}
 }
