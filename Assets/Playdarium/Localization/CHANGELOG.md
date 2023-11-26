@@ -2,6 +2,14 @@
 
 ---
 
+## [v1.0.9](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
+
+### Fixed
+
+- Project installer
+
+---
+
 ## [v1.0.8](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
 
 ### Added

@@ -23,7 +23,7 @@ MonoBehaviour:
   legacyPackageDestinationPath: 
   packageName: com.playdarium.localization
   displayName: Localization
-  packageVersion: 1.0.8
+  packageVersion: 1.0.9
   unityVersion: 2021.3
   description: Fast and simple localization utility
   category: Utility
