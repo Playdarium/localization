@@ -2,6 +2,14 @@
 
 ---
 
+## [v1.0.8](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
+
+### Added
+
+- Possible localize `LocalizationInjection` as component
+
+---
+
 ## [v1.0.7](https://github.com/Playdarium/localization/releases/tag/v0.0.0)
 
 ### Added
