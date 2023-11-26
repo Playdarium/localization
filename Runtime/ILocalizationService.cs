@@ -16,5 +16,7 @@ namespace Playdarium.Localization.Runtime
 		void NextLanguage();
 
 		void PreviousLanguage();
+
+		string Find(string key);
 	}
 }
